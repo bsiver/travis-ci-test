@@ -1,9 +1,11 @@
-language: clojure
 env:
     - TEST_DIR=dumb-clojure-app
     - TEST_DIR=dumb-python-app
 before_install:
     - npm install gulp
     - sudo apt-get update
-    - sudo apt-get install leiningen
-script: cd $TEST_DIR && npm install && npm test
+    - sudo apt-get install leiningen pip
+    - pip install nose
+script: 
+    - cd $TEST_DIR
+    - make tests 

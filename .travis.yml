@@ -4,8 +4,9 @@ env:
 before_install:
     - npm install gulp
     - sudo apt-get update
-    - sudo apt-get install leiningen pip
-    - pip install nose
+    - sudo apt-get install leiningen python-setuptools python-dev build-essential 
+    - sudo easy_install pip
+    - sudo pip install --upgrade virtualenv nose
 script: 
     - cd $TEST_DIR
     - make tests 

@@ -1,2 +1,9 @@
 language: clojure
-before_install: cd dumb-clojure-app
+env:
+    - TEST_DIR=dumb-clojure-app
+    - TEST_DIR=dumb-python-app
+before_install:
+    - npm install gulp
+    - sudo apt-get update
+    - sudo apt-get install lein
+script: cd $TEST_DIR && npm install && npm test

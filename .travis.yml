@@ -1,3 +1,5 @@
+notifications:
+    slack: curiosity:mXgqc6h5J3e9oN8yu5oR2EAA
 env:
     - TEST_DIR=dumb-clojure-app
     - TEST_DIR=dumb-python-app
@@ -9,4 +11,4 @@ before_install:
     - sudo pip install --upgrade virtualenv nose
 script: 
     - cd $TEST_DIR
-    - make tests 
+    - make tests

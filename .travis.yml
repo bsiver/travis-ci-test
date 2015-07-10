@@ -12,3 +12,6 @@ before_install:
 script: 
     - cd $TEST_DIR
     - make tests
+branches:
+    only:
+        - test-branching
